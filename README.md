@@ -32,54 +32,48 @@ The system uses Eye Aspect Ratio (EAR) extracted from facial landmarks detected 
 
 # EAR Formula
 $EAR = \frac{|p_2 - p_6| + |p_3 - p_5|}{2 |p_1 - p_4|}$
-# EAR Formula
 
-$EAR = \frac{|p_2 - p_6| + |p_3 - p_5|}{2 |p_1 - p_4|}$
-
-1. General Definition
-
+**General Definition**  
 Eye Aspect Ratio (EAR) is a geometric ratio used to measure eye openness based on facial landmarks.  
 It is a scale-invariant metric, meaning it is independent of face size and camera distance.
 
-2. Landmark Points Definition
+**Landmark Points Definition**  
+p1, p4:  
+Eye corner landmarks  
+Represent the horizontal eye width  
+Used for normalization  
 
-- p1, p4:
-  - Eye corner landmarks  
-  - Represent the horizontal eye width  
-  - Used for normalization  
+p2, p6:  
+Vertical eyelid landmarks (first pair)  
+Measure vertical eye opening  
 
-- p2, p6:
-  - Vertical eyelid landmarks (first pair)  
-  - Measure vertical eye opening  
+p3, p5:  
+Vertical eyelid landmarks (second pair)  
+Improve stability and reduce noise sensitivity  
 
-- p3, p5:
-  - Vertical eyelid landmarks (second pair)  
-  - Improve stability and reduce noise sensitivity  
+**Mathematical Structure**  
+Numerator:  
+Sum of vertical eye distances  
+Represents eye opening height  
 
-3. Mathematical Structure
+Denominator:  
+Horizontal eye width  
+Used for normalization  
 
-- Numerator:
-  - Sum of vertical eye distances
-  - Represents eye opening height
+Absolute value:  
+Ensures all distance values are positive  
 
-- Denominator:
-  - Horizontal eye width
-  - Used for normalization
+**Geometric Interpretation**  
+EAR increases when the eye opens  
+EAR decreases when the eye closes  
+Provides a continuous representation of eye state  
 
-- Absolute value:
-  - Ensures all distance values are positive
+**Final Interpretation**  
+High EAR → Eye is open  
+Medium EAR → Partially open eye  
+Low EAR → Eye is closed  
 
-4. Geometric Interpretation
-
-- EAR increases when the eye opens  
-- EAR decreases when the eye closes  
-- Provides a continuous representation of eye state  
-
-5. Final Interpretation
-
-- High EAR → Eye is open  
-- Medium EAR → Partially open eye  
-- Low EAR → Eye is closed  
+ 
 
 # Interpretation
 
