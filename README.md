@@ -36,12 +36,12 @@ $EAR = \frac{|p_2 - p_6| + |p_3 - p_5|}{2 |p_1 - p_4|}$
 
 $EAR = \frac{|p_2 - p_6| + |p_3 - p_5|}{2 |p_1 - p_4|}$
 
-## 1. General Definition
+1. General Definition
 
 Eye Aspect Ratio (EAR) is a geometric ratio used to measure eye openness based on facial landmarks.  
 It is a scale-invariant metric, meaning it is independent of face size and camera distance.
 
-## 2. Landmark Points Definition
+2. Landmark Points Definition
 
 - p1, p4:
   - Eye corner landmarks  
@@ -56,7 +56,7 @@ It is a scale-invariant metric, meaning it is independent of face size and camer
   - Vertical eyelid landmarks (second pair)  
   - Improve stability and reduce noise sensitivity  
 
-## 3. Mathematical Structure
+3. Mathematical Structure
 
 - Numerator:
   - Sum of vertical eye distances
@@ -69,13 +69,13 @@ It is a scale-invariant metric, meaning it is independent of face size and camer
 - Absolute value:
   - Ensures all distance values are positive
 
-## 4. Geometric Interpretation
+4. Geometric Interpretation
 
 - EAR increases when the eye opens  
 - EAR decreases when the eye closes  
 - Provides a continuous representation of eye state  
 
-## 5. Final Interpretation
+5. Final Interpretation
 
 - High EAR → Eye is open  
 - Medium EAR → Partially open eye  
