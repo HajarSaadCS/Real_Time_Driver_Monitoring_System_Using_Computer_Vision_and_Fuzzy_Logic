@@ -38,39 +38,40 @@ EAR measures eye openness using geometric distances between landmark points.
 
 # EAR Formula
 $EAR = \frac{|p_2 - p_6| + |p_3 - p_5|}{2 |p_1 - p_4|}$
-Landmark Points Meaning
-p1 and p4 (Eye Width)
+1. General Definition
 
-These are the two corner points of the eye.
-They define the horizontal width of the eye and are used for normalization.
+Eye Aspect Ratio (EAR) is a geometric ratio used to measure eye openness based on facial landmarks.
 
-p2 and p6 (First Vertical Distance)
+It is a scale-invariant metric, meaning it does not depend on face size or camera distance.
 
-These points measure the vertical distance between the upper and lower eyelid.
-They represent how open the eye is in one vertical direction.
-
-p3 and p5 (Second Vertical Distance)
-
-These points measure another vertical eyelid distance.
-They improve stability and accuracy of the EAR calculation.
-
-Absolute Value
-
-The absolute value ensures that all distances are positive and correctly represent geometric distance.
-
-Why Division is Used
-
-The denominator normalizes the EAR using the eye width.
-
-This makes the result:
-
-Independent of face size
-Independent of camera distance
-More stable across different users
-Final Meaning
-Higher EAR → eye is open
-Lower EAR → eye is closed
-Medium EAR → partially open eye
+2. Landmark Points Definition
+p1, p4
+Eye corner landmarks
+Represent horizontal eye width
+Used for normalization
+p2, p6
+Vertical eyelid landmarks (first pair)
+Measure first vertical eye opening
+p3, p5
+Vertical eyelid landmarks (second pair)
+Improve stability and reduce noise sensitivity
+3. Mathematical Structure
+Numerator:
+Sum of vertical eye distances
+Represents eye opening height
+Denominator:
+Horizontal eye width
+Used for normalization
+Absolute value:
+Ensures all distances are positive
+4. Geometric Interpretation
+EAR increases when eye opens
+EAR decreases when eye closes
+Provides continuous measurement of eye state
+5. Final Interpretation
+High EAR → Eye is open
+Medium EAR → Partially open eye
+Low EAR → Eye is closed
 
 # Interpretation
 
