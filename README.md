@@ -127,11 +127,11 @@ The system uses a Mamdani fuzzy inference system.
 
 **Rules:**
 
--IF EAR is HIGH THEN Risk is LOW
+- IF EAR is HIGH THEN Risk is LOW
 
--IF EAR is MEDIUM THEN Risk is MEDIUM
+- IF EAR is MEDIUM THEN Risk is MEDIUM
 
--IF EAR is LOW THEN Risk is HIGH
+- IF EAR is LOW THEN Risk is HIGH
 
 **Rule Design Logic:**
 
