@@ -97,12 +97,15 @@ Low EAR means eyes are closed
 Each EAR value is mapped into fuzzy sets using membership functions.
 
 **Input Variable:** EAR
+
 Range: [0, 0.5]
+
 -LOW means eyes closed
 -MEDIUM means partially open
 -HIGH means eyes open
 
 **Output Variable:** Risk
+
 Range: [0, 1]
 
 -LOW means Safe
@@ -110,6 +113,7 @@ Range: [0, 1]
 -HIGH means Danger
 
 **Concept:**
+
 Instead of assigning one label, each input belongs to multiple fuzzy sets with different degrees of membership between 0 and 1.
 
 **Example:**
@@ -124,7 +128,9 @@ The system uses a Mamdani fuzzy inference system.
 **Rules:**
 
 -IF EAR is HIGH THEN Risk is LOW
+
 -IF EAR is MEDIUM THEN Risk is MEDIUM
+
 -IF EAR is LOW THEN Risk is HIGH
 
 **Rule Design Logic:**
