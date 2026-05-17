@@ -97,6 +97,9 @@ Low EAR means eyes are closed
 
 Each EAR value is mapped into fuzzy sets using membership functions.
 
+![Eye Landmark Diagram](Image/Figure_2.png)
+
+
 **Input Variable: EAR**
 
 - Range:
