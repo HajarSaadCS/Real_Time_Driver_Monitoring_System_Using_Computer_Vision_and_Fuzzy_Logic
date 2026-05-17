@@ -157,11 +157,15 @@ The system uses a Mamdani fuzzy inference system.
 Explainable AI is achieved because every decision is fully traceable to fuzzy rules. Unlike black box models, this system is fully interpretable.
 
 **Why this system is explainable:**
--Each output is directly generated from rules
--Membership functions define input interpretation
--Inference process is fully transparent
+
+- Each output is directly generated from rules
+
+- Membership functions define input interpretation
+
+- Inference process is fully transparent
 
 **Relationship between rules and explainability:**
+
 The fuzzy rule base acts as the explanation mechanism of the system.
 
 Each decision can be traced back to:
