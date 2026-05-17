@@ -6,7 +6,6 @@ Instead of using fixed thresholds, the system applies fuzzy reasoning to evaluat
 
 The system is lightweight, explainable, and suitable for real-world uncertain driving conditions.
 
----
 
 # Main Idea
 
@@ -20,7 +19,6 @@ The system evaluates eye behavior gradually and assigns a risk level based on un
 
 This is achieved using fuzzy logic.
 
----
 
 # What is Fuzzy Logic
 
@@ -33,23 +31,16 @@ Risk is inferred gradually instead of being fixed.
 
 This makes the system more suitable for real-world uncertain environments such as driving.
 
----
-
 # Feature Extraction (EAR)
 
 The system uses Eye Aspect Ratio (EAR) extracted from facial landmarks detected by MediaPipe.
 
 EAR measures eye openness using geometric distances between landmark points.
 
----
 
 # EAR Formula
+$EAR = \frac{|p_2 - p_6| + |p_3 - p_5|}{2 |p_1 - p_4|}$
 
-[
-EAR = \frac{|p_2 - p_6| + |p_3 - p_5|}{2 |p_1 - p_4|}
-]
-
----
 
 # Interpretation
 
@@ -57,7 +48,6 @@ High EAR means eyes are open
 Medium EAR means partially open
 Low EAR means eyes are closed
 
----
 
 # Membership Functions
 
@@ -83,7 +73,6 @@ Instead of assigning one label, each input belongs to multiple fuzzy sets with d
 Example:
 EAR = 0.18 may belong partially to LOW and MEDIUM at the same time.
 
----
 
 # Fuzzy Rule Base
 
@@ -100,8 +89,6 @@ Rule Design Logic:
 More open eyes correspond to lower risk
 Closed eyes correspond to higher risk
 Partial openness corresponds to uncertainty
-
----
 
 # Explainable AI and Rule Transparency
 
