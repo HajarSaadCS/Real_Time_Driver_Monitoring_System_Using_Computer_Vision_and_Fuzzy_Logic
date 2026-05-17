@@ -38,42 +38,48 @@ Eye Aspect Ratio (EAR) is a geometric ratio used to measure eye openness based o
 It is a scale-invariant metric, meaning it is independent of face size and camera distance.
 
 **Landmark Points Definition**  
-p1, p4:  
-Eye corner landmarks  
-Represent the horizontal eye width  
-Used for normalization  
+- p1, p4:
+  - Eye corner landmarks
+  - Represent the horizontal eye width
+  - Used for normalization
 
-p2, p6:  
-Vertical eyelid landmarks (first pair)  
-Measure vertical eye opening  
+- p2, p6:
+  - Vertical eyelid landmarks (first pair)
+  - Measure vertical eye opening
 
-p3, p5:  
-Vertical eyelid landmarks (second pair)  
-Improve stability and reduce noise sensitivity  
+- p3, p5:
+  - Vertical eyelid landmarks (second pair)
+  - Improve stability and reduce noise sensitivity
 
-**Mathematical Structure**  
-Numerator:  
-Sum of vertical eye distances  
-Represents eye opening height  
+ **Mathematical Structure**
+- Numerator:
+  - Sum of vertical eye distances
+  - Represents eye opening height
 
-Denominator:  
-Horizontal eye width  
-Used for normalization  
+- Denominator:
+  - Horizontal eye width
+  - Used for normalization
 
-Absolute value:  
-Ensures all distance values are positive  
+- Absolute value:
+  - Ensures all distance values are positive
 
-**Geometric Interpretation**  
-EAR increases when the eye opens  
-EAR decreases when the eye closes  
-Provides a continuous representation of eye state  
+**Geometric Interpretation**
 
-**Final Interpretation**  
-High EAR → Eye is open  
-Medium EAR → Partially open eye  
-Low EAR → Eye is closed  
+- EAR increases when the eye opens
+- EAR decreases when the eye closes
+- Provides a continuous representation of eye state
 
- 
+
+**Final Interpretation**
+
+- High EAR:
+  - Eye is open
+
+- Medium EAR:
+  - Partially open eye
+
+- Low EAR:
+  - Eye is closed
 
 # Interpretation
 
