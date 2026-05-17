@@ -2,9 +2,7 @@
 
 A real-time driver monitoring system that detects drowsiness using computer vision and fuzzy logic.
 
-Instead of using fixed thresholds, the system applies fuzzy reasoning to evaluate eye states and produce gradual risk levels: Safe, Warning, Danger.
-
-The system is lightweight, explainable, and suitable for real-world uncertain driving conditions.
+Instead of using fixed thresholds, the system applies fuzzy reasoning to evaluate eye states and produce gradual risk levels: Safe, Warning, Danger. The system is lightweight, explainable, and suitable for real-world uncertain driving conditions.
 
 
 # Main Idea
@@ -15,9 +13,7 @@ Instead of making a strict decision such as:
 
 IF EAR < threshold → drowsy
 
-The system evaluates eye behavior gradually and assigns a risk level based on uncertainty.
-
-This is achieved using fuzzy logic.
+The system evaluates eye behavior gradually and assigns a risk level based on uncertainty. This is achieved using fuzzy logic.
 
 
 # What is Fuzzy Logic
@@ -25,27 +21,22 @@ This is achieved using fuzzy logic.
 Fuzzy Logic is a mathematical reasoning approach that allows partial truth values between 0 and 1 instead of binary decisions.
 
 In this project:
-Eye state is not only open or closed.
-It can be partially open with different degrees.
-Risk is inferred gradually instead of being fixed.
+- Eye state is not only open or closed.
+- It can be partially open with different degrees.
+- Risk is inferred gradually instead of being fixed.
 
 This makes the system more suitable for real-world uncertain environments such as driving.
 
 # Feature Extraction (EAR)
-The system uses Eye Aspect Ratio (EAR) extracted from facial landmarks detected by MediaPipe.
-
-EAR measures eye openness using geometric distances between landmark points.
+The system uses Eye Aspect Ratio (EAR) extracted from facial landmarks detected by MediaPipe. EAR measures eye openness using geometric distances between landmark points.
 
 # EAR Formula
 $EAR = \frac{|p_2 - p_6| + |p_3 - p_5|}{2 |p_1 - p_4|}$
 1. General Definition
-
-Eye Aspect Ratio (EAR) is a geometric ratio used to measure eye openness based on facial landmarks.
-
-It is a scale-invariant metric, meaning it does not depend on face size or camera distance.
+Eye Aspect Ratio (EAR) is a geometric ratio used to measure eye openness based on facial landmarks. It is a scale-invariant metric, meaning it does not depend on face size or camera distance.
 
 2. Landmark Points Definition
-p1, p4
+-p1, p4
 Eye corner landmarks
 Represent horizontal eye width
 Used for normalization
