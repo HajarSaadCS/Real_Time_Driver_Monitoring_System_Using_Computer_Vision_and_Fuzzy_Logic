@@ -96,24 +96,24 @@ Low EAR means eyes are closed
 
 Each EAR value is mapped into fuzzy sets using membership functions.
 
-Input Variable: EAR
+**Input Variable:** EAR
 Range: [0, 0.5]
+-LOW means eyes closed
+-MEDIUM means partially open
+-HIGH means eyes open
 
-LOW means eyes closed
-MEDIUM means partially open
-HIGH means eyes open
-
-Output Variable: Risk
+**Output Variable:** Risk
 Range: [0, 1]
 
-LOW means Safe
-MEDIUM means Warning
-HIGH means Danger
+-LOW means Safe
+-MEDIUM means Warning
+-HIGH means Danger
 
-Concept:
+**Concept:**
 Instead of assigning one label, each input belongs to multiple fuzzy sets with different degrees of membership between 0 and 1.
 
-Example:
+**Example:**
+
 EAR = 0.18 may belong partially to LOW and MEDIUM at the same time.
 
 
@@ -121,39 +121,38 @@ EAR = 0.18 may belong partially to LOW and MEDIUM at the same time.
 
 The system uses a Mamdani fuzzy inference system.
 
-Rules:
+**Rules:**
 
-IF EAR is HIGH THEN Risk is LOW
-IF EAR is MEDIUM THEN Risk is MEDIUM
-IF EAR is LOW THEN Risk is HIGH
+-IF EAR is HIGH THEN Risk is LOW
+-IF EAR is MEDIUM THEN Risk is MEDIUM
+-IF EAR is LOW THEN Risk is HIGH
 
-Rule Design Logic:
+**Rule Design Logic:**
 
-More open eyes correspond to lower risk
-Closed eyes correspond to higher risk
-Partial openness corresponds to uncertainty
+1. More open eyes correspond to lower risk
+2. Closed eyes correspond to higher risk
+3. Partial openness corresponds to uncertainty
+
 
 # Explainable AI and Rule Transparency
 
-Explainable AI is achieved because every decision is fully traceable to fuzzy rules.
+Explainable AI is achieved because every decision is fully traceable to fuzzy rules. Unlike black box models, this system is fully interpretable.
 
-Unlike black box models, this system is fully interpretable.
+**Why this system is explainable:**
+-Each output is directly generated from rules
+-Membership functions define input interpretation
+-Inference process is fully transparent
 
-Why this system is explainable:
-Each output is directly generated from rules
-Membership functions define input interpretation
-Inference process is fully transparent
-
-Relationship between rules and explainability:
+**Relationship between rules and explainability:**
 The fuzzy rule base acts as the explanation mechanism of the system.
 
 Each decision can be traced back to:
-Which rule fired
-How strongly it was activated
-How it contributed to final risk
+-Which rule fired
+-How strongly it was activated
+-How it contributed to final risk
 
 If the system outputs Danger:
-EAR is low
-Rule LOW leads to HIGH risk is activated
-Final risk increases accordingly
+-EAR is low
+-Rule LOW leads to HIGH risk is activated
+-Final risk increases accordingly
 
