@@ -15,7 +15,6 @@ face_mesh = mp_face_mesh.FaceMesh(
 mp_draw = mp.solutions.drawing_utils
 cap = cv2.VideoCapture(0)
 
-# 🔹 Eye points
 LEFT_EYE = [33, 160, 158, 133, 153, 144]
 RIGHT_EYE = [362, 385, 387, 263, 373, 380]
 
@@ -97,7 +96,6 @@ while True:
                 status = "Danger"
                 color = (0, 0, 255)
 
-                # 🔊 controlled alert
                 if time.time() - last_beep > 2:
                     winsound.Beep(1000, 200)
                     last_beep = time.time()
