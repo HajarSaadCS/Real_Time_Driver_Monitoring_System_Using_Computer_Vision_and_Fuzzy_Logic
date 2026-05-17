@@ -96,22 +96,34 @@ Low EAR means eyes are closed
 
 Each EAR value is mapped into fuzzy sets using membership functions.
 
-**Input Variable:** EAR
+**Input Variable: EAR**
 
-Range: [0, 0.5]
+- Range:
+  - [0, 0.5]
 
--LOW means eyes closed
--MEDIUM means partially open
--HIGH means eyes open
+- LOW:
+  - Means eyes closed
 
-**Output Variable:** Risk
+- MEDIUM:
+  - Means partially open eyes
 
-Range: [0, 1]
+- HIGH:
+  - Means eyes open
 
--LOW means Safe
--MEDIUM means Warning
--HIGH means Danger
 
+**Output Variable: Risk**
+
+- Range:
+  - [0, 1]
+
+- LOW:
+  - Means Safe
+
+- MEDIUM:
+  - Means Warning
+
+- HIGH:
+  - Means Danger
 **Concept:**
 
 Instead of assigning one label, each input belongs to multiple fuzzy sets with different degrees of membership between 0 and 1.
@@ -153,12 +165,18 @@ Explainable AI is achieved because every decision is fully traceable to fuzzy ru
 The fuzzy rule base acts as the explanation mechanism of the system.
 
 Each decision can be traced back to:
--Which rule fired
--How strongly it was activated
--How it contributed to final risk
+
+- Which rule fired
+  
+- How strongly it was activated
+  
+- How it contributed to final risk
 
 If the system outputs Danger:
--EAR is low
--Rule LOW leads to HIGH risk is activated
--Final risk increases accordingly
+
+- EAR is low
+  
+- Rule LOW leads to HIGH risk is activated
+  
+- Final risk increases accordingly
 
