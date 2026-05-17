@@ -33,9 +33,11 @@ The system uses Eye Aspect Ratio (EAR) extracted from facial landmarks detected 
 # EAR Formula
 $EAR = \frac{|p_2 - p_6| + |p_3 - p_5|}{2 |p_1 - p_4|}$
 
+
 **General Definition**  
 Eye Aspect Ratio (EAR) is a geometric ratio used to measure eye openness based on facial landmarks.  
 It is a scale-invariant metric, meaning it is independent of face size and camera distance.
+
 
 **Landmark Points Definition**  
 - p1, p4:
@@ -51,6 +53,7 @@ It is a scale-invariant metric, meaning it is independent of face size and camer
   - Vertical eyelid landmarks (second pair)
   - Improve stability and reduce noise sensitivity
 
+
  **Mathematical Structure**
 - Numerator:
   - Sum of vertical eye distances
@@ -62,6 +65,7 @@ It is a scale-invariant metric, meaning it is independent of face size and camer
 
 - Absolute value:
   - Ensures all distance values are positive
+
 
 **Geometric Interpretation**
 
