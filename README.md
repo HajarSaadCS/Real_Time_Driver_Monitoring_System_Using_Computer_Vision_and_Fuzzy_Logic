@@ -32,15 +32,45 @@ Risk is inferred gradually instead of being fixed.
 This makes the system more suitable for real-world uncertain environments such as driving.
 
 # Feature Extraction (EAR)
-
 The system uses Eye Aspect Ratio (EAR) extracted from facial landmarks detected by MediaPipe.
 
 EAR measures eye openness using geometric distances between landmark points.
 
-
 # EAR Formula
 $EAR = \frac{|p_2 - p_6| + |p_3 - p_5|}{2 |p_1 - p_4|}$
+Landmark Points Meaning
+p1 and p4 (Eye Width)
 
+These are the two corner points of the eye.
+They define the horizontal width of the eye and are used for normalization.
+
+p2 and p6 (First Vertical Distance)
+
+These points measure the vertical distance between the upper and lower eyelid.
+They represent how open the eye is in one vertical direction.
+
+p3 and p5 (Second Vertical Distance)
+
+These points measure another vertical eyelid distance.
+They improve stability and accuracy of the EAR calculation.
+
+Absolute Value
+
+The absolute value ensures that all distances are positive and correctly represent geometric distance.
+
+Why Division is Used
+
+The denominator normalizes the EAR using the eye width.
+
+This makes the result:
+
+Independent of face size
+Independent of camera distance
+More stable across different users
+Final Meaning
+Higher EAR → eye is open
+Lower EAR → eye is closed
+Medium EAR → partially open eye
 
 # Interpretation
 
